@@ -68,11 +68,12 @@ MoneyBookItem.propTypes = {
 }
 
 const Title = (props) => {
-    return (<h1>{props.hoge}</h1>)
+    return (<h1>{props.children}</h1>)
 }
 
 Title.propTypes = {
-    hoge: PropTypes.string
+    // 子要素にアクセスするための children は予約語? hoge とか任意のキー名にしてもアクセスする側であわせてればいい、とかではない。
+    children: PropTypes.string
 }
 
 ReactDOM.render(
